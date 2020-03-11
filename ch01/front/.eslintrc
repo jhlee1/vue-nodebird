@@ -1,0 +1,21 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module" // vue는 module이기 때문에 script라고 안쓰고 module이라고 씀
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/recommended"
+
+  ],
+  "plugins": [
+
+  ],
+  "rules": {
+//    "vue/max-attributes-per-line": "off", // 이런식으로 특정 옵션을 끌 수 있음
+//    "vue/singleline-html-element-content-newline": "off"
+  }
+}
