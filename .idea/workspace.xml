@@ -2,9 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f99ebb7e-9370-4f35-866a-75275f1ee3df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch01/front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/eslintPlugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vue-nodebird.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/components/FollowList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/components/LoginForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/components/PostCard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/layouts/admin.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/layouts/default.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/nuxt.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/pages/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/pages/profile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch01/front/pages/signup.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/components/FollowList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/components/LoginForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/components/PostCard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/components/PostForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/layouts/admin.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/layouts/default.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/nuxt.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/pages/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/pages/profile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/pages/signup.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/posts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/posts_scsslint_tmp5368317705473853211.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/posts_scsslint_tmp9122340499501049125.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/users.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +111,7 @@
       <workItem from="1583495855319" duration="1819000" />
       <workItem from="1583779841830" duration="1126000" />
       <workItem from="1583781032828" duration="4311000" />
-      <workItem from="1583840726804" duration="6407000" />
+      <workItem from="1583840726804" duration="6514000" />
     </task>
     <servers />
   </component>
