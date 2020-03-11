@@ -40,7 +40,7 @@
         methods: {
             onChangeTextarea() {
                 this.hideDetails = true;
-                this,success = false;
+                this.success = false;
                 this.successMessages = '';
 
             },
