@@ -1,5 +1,5 @@
 <template>
-    <v-card>
+    <v-card style="margin-bottom: 20px">
         <v-container>
             <v-form ref="form" v-model="valid" @submit.prevent="onSubmitForm">
                 <v-textarea
@@ -27,6 +27,7 @@
     export default {
         data() {
             return {
+                valid: false,
                 hideDetails: true,
                 successMessages: '',
                 success: false,
@@ -34,18 +35,20 @@
             }
         },
         computed: {
-            ...mapState(['users/me']),
-            // ...mapState(['users', ['me']) 이렇게 처리하기도 함
+            // ...mapState(['users/me']),  이렇게 처리하기도 함
+            ...mapState('users', ['me']),
         },
         methods: {
-            onChangeTextarea() {
-                this.hideDetails = true;
-                this.success = false;
-                this.successMessages = '';
-
+            onChangeTextarea(value) {
+                if (value.value) {
+                    this.hideDetails = true;
+                    this.success = false;
+                    this.successMessages = '';
+                }
             },
             onSubmitForm() {
                 if (this.$refs.form.validate()) {
+                    console.log("Submitted by " + this.me)
                     this.$store.dispatch('posts/add', {
                         content: this.content,
                         User: {

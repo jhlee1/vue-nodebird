@@ -1,5 +1,5 @@
 export const state = () =>({
-    mainPostsL: []
+    mainPosts: []
 });
 
 export const mutations = {
@@ -7,7 +7,8 @@ export const mutations = {
         state.mainPosts.unshift(payload);
     },
     removeMainPost(state, payload) {
-
+        const index = state.mainPosts.findIndex(v => v.id === payload.id);
+        state.mainPosts.splice(index, 1);
     }
 };
 
