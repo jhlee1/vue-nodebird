@@ -22,7 +22,13 @@
          },
      },
      data() {
-
+         return {
+             valid: false,
+             content: '',
+             success: false,
+             successMessages: '',
+             hideDetails: true
+         }
      },
      computed: {
          me() {

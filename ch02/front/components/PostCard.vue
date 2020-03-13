@@ -1,5 +1,6 @@
 <template>
-    <v-card style="margin-bottom: 20px"> <!-- 여기는 왜 :style을 안쓸까? -->
+    <div style="margin-bottom: 20px"> <!-- 여기는 왜 :style을 안쓸까? -->
+    <v-card >
 <!--        <v-image />-->
         <v-card-text>
             <div>
@@ -14,7 +15,7 @@
             <v-btn text color="orange">
                 <v-icon>mdi-heart-outline</v-icon>
             </v-btn>
-            <v-btn text color="orange">
+            <v-btn text color="orange" @click="onToggleComment">
                 <v-icon>mdi-comment-outline</v-icon>
             </v-btn>
             <v-btn text color="orange">
@@ -34,14 +35,34 @@
 
         </v-card-actions>
     </v-card>
+        <template v-if="commentOpened"> <!-- if 를 쓰기 위해 div 대신 template -->
+            <comment-form :post-id="post.id"></comment-form>
+            <v-list>
+            <v-list-item v-for="c in post.Comments" :key="c.id">
+                <v-list-item-avatar color="teal">
+                    <span>{{c.User.nickname[0]}}</span>
+                </v-list-item-avatar>
+                <v-list-item-title>{{c.User.nickname}}</v-list-item-title>
+                <v-list-item-subtitle>{{c.content}}</v-list-item-subtitle>
+            </v-list-item>
+            </v-list>
+        </template>
+    </div>
 </template>
 
 <script>
+    import CommentForm from "~/components/CommentForm";
     export default {
+        components: {CommentForm},
         props: {
             post: {
                 type: Object,
                 required: true
+            }
+        },
+        data() {
+            return {
+                commentOpened: false,
             }
         },
         methods: {
@@ -53,6 +74,9 @@
             onEditPost() {
 
             },
+            onToggleComment() {
+                this.commentOpened = !this.commentOpened;
+            }
         }
     }
 </script>

@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f99ebb7e-9370-4f35-866a-75275f1ee3df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/components/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/components/CommentForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/components/PostCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/components/PostCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/pages/profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/pages/profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/store/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/front/store/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/store/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +44,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="com.eslint.settings.ESLintSettingsPage" />
+    <property name="settings.editor.selected.configurable" value="tv.twelvetone.intellij.plugins.intellivue.preferences.IntellivueConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,7 +77,8 @@
       <workItem from="1583779841830" duration="1126000" />
       <workItem from="1583781032828" duration="4311000" />
       <workItem from="1583840726804" duration="7839000" />
-      <workItem from="1583996898537" duration="4669000" />
+      <workItem from="1583996898537" duration="6940000" />
+      <workItem from="1584065501635" duration="101000" />
     </task>
     <servers />
   </component>
@@ -89,10 +95,12 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Notifications/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583780299951" />
-    <state x="440" y="190" key="#Plugins" timestamp="1583781022477">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1417" y="195" key="#Plugins" timestamp="1584065580536">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="440" y="190" key="#Plugins/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583781022477" />
+    <state x="-1417" y="195" key="#Plugins/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584065580536" />
+    <state x="-1417" y="195" key="#Plugins/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1584065490554" />
     <state x="440" y="190" key="#Plugins/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583338043012" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583780845464">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -122,26 +130,27 @@
     </state>
     <state width="1659" height="295" key="GridCell.Tab.0.right/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583717422742" />
     <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1583496517317" />
-    <state x="341" y="164" key="SettingsEditor" timestamp="1583338211259">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1530" y="169" key="SettingsEditor" timestamp="1584065555937">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1530" y="169" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584065555937" />
     <state x="341" y="164" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583338211259" />
-    <state x="-1351" y="290" width="781" height="500" key="find.popup" timestamp="1584001539935">
+    <state x="-1351" y="290" width="781" height="500" key="find.popup" timestamp="1584064034968">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="498" y="282" width="683" height="486" key="find.popup/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583856565797" />
-    <state x="-1351" y="290" width="781" height="500" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1583892638294" />
+    <state x="-1351" y="290" width="781" height="500" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584064034968" />
     <state x="-1351" y="290" width="781" height="500" key="find.popup/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1584001539935" />
     <state x="498" y="282" width="683" height="486" key="find.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583334537955" />
     <state x="440" y="190" key="scopes" timestamp="1583319077595">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583319077595" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1584004626455">
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1584065559230">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583781013763" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584004626455" />
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584065559230" />
     <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1584001543408" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1583851325482" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583338085838" />

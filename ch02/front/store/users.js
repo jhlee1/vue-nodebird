@@ -1,5 +1,7 @@
 export const state = () => ({
     me: null, // 로그인 상태면 값이 들어있고 비로그인 상태면 null임
+    followingList: [],
+    followerList: []
 });
 
 export const mutations = {
@@ -7,6 +9,9 @@ export const mutations = {
     // 따라서, mutations 안에 비동기 작업이 있으면 안된다 Ex) Promise, axios, ajax  등등
     setMe(state, payload) {
         state.me = payload;
+    },
+    changeNickname(state, payload) {
+        state.me.nickname = payload.nickname
     }
 }
 
@@ -25,5 +30,8 @@ export const actions = {
     },
     logOut({commit}, payload) {
         commit('setMe', null);
+    },
+    changeNickname({commit}, payload) {
+        commit('changeNickname', payload);
     }
 };
