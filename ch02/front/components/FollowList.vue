@@ -1,23 +1,29 @@
 <template>
     <v-list-tile>
-        <v-list>
-            <v-list-item v-for="c in followings" :key="c.id">
-                <span>{{c.nickname}}</span>
+        <ul>
+            <li v-for="user in users" :key="user.id">
+                <span>{{user.nickname}}</span>
 
-                <v-btn dark color="red" @click="onRemoveFollowing"><v-icon>mdi-minus-circle-outline</v-icon></v-btn>
-            </v-list-item>
+                <v-icon @click="remove(user.id)">mdi-minus-circle-outline</v-icon>
+            </li>
+        </ul>
         </v-list>
     </v-list-tile>
 </template>
 <script>
     export default {
-        data() {
-            return {
+        props: {
+            users: {
+                type: Array,
+                required: true
+            },
+            remove: {
+                type: Function,
+                required: true
             }
         },
-        computed: {
-            followings() {
-                return this.$store.state.users.followingList;
+        data() {
+            return {
             }
         },
         methods: {
