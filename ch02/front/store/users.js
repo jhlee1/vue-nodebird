@@ -1,7 +1,19 @@
 export const state = () => ({
     me: null, // 로그인 상태면 값이 들어있고 비로그인 상태면 null임
-    followingList: [],
-    followerList: []
+    followingList: [
+        {
+            "id" : 1,
+            "nickname" : "제로초"
+        },
+        {
+            "id" : 2,
+            "nickname" : "네로"
+        },
+        {
+            "id" : 3,
+            "nickname" : "히어로"
+        }
+    ]
 });
 
 export const mutations = {
@@ -12,6 +24,10 @@ export const mutations = {
     },
     changeNickname(state, payload) {
         state.me.nickname = payload.nickname
+    },
+    removeFollowing(state, payload) {
+        const index = state.followingList.findIndex(v => v.id === payload.id);
+        state.followingList.splice(index, 1)
     }
 }
 
@@ -33,5 +49,8 @@ export const actions = {
     },
     changeNickname({commit}, payload) {
         commit('changeNickname', payload);
+    },
+    removeFollowing({commit}, payload) {
+        commit('removeFollowing', payload);
     }
 };
