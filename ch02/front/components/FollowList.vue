@@ -6,8 +6,7 @@
 
                 <v-icon @click="remove(user.id)">mdi-minus-circle-outline</v-icon>
             </li>
-        </ul>
-        </v-list>
+        </ul>      
     </v-list-tile>
 </template>
 <script>
