@@ -62,7 +62,7 @@ export const actions = {
     // signUp(context, payload) { // context 안에는 commit, dispatch, state, rootState, getters, rootGetters 등이 들어있음. 직접 console.log(context)로 확인가능
 
     signUp({commit, state}, payload) {
-        console.log(this.$axios.post('/user'), {
+        console.log(this.$axios.post('http://localhost:3085/user'), {
             email: payload.email,
             nickname: payload.nickname,
             password: payload.password
