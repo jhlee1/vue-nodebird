@@ -75,7 +75,7 @@ export const actions = {
 
     },
     logOut({commit}, payload) {
-        this.$axios.post('http://localhost:3085/user/logout', {})
+        this.$axios.post('http://localhost:3085/user/logout', {}, { withCredentials: true})
         .then((data) => {
             commit('setMe', null);    
         }).catch((err) => {
