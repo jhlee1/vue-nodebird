@@ -82,7 +82,9 @@ app.post('/user/login', (req, res) => {
         if (info) { // 실패
             return res.status(401).send(info.reason);
         }
+        // cookie는 이 밑 라인에서 알아서 header에 넣어줌
         return req.login(user, async(err) => {  // session에 user를 저장 ... 어떻게? passport/index.js 안에 serialize 설정을 통해
+        
             if (err) {
                 console.err(err);
                 return next(err);
