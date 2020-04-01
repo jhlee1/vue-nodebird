@@ -62,17 +62,29 @@ export const actions = {
     // signUp(context, payload) { // context 안에는 commit, dispatch, state, rootState, getters, rootGetters 등이 들어있음. 직접 console.log(context)로 확인가능
 
     signUp({commit, state}, payload) {
-        console.log(this.$axios.post('http://localhost:3085/user'), {
+        this.$axios.post('http://localhost:3085/user', {
             email: payload.email,
             nickname: payload.nickname,
             password: payload.password
+        }).then((data) => {
+            console.log(data)
+            commit('setMe', payload);
         });
-        commit('setMe', payload);
+
     },
 
     logIn({commit}, payload) {
-        commit('setMe', payload);
-
+        this.$axios.post('http://localhost:3085/user/login', {
+                email: payload.email,
+                password: payload.password
+            },
+            {
+                withCredentials: true // 서로 다른 credential 간에 cookie를 심어주기 위해 필요하다 (지금 호스트가 각각 localhost:3000, localhost:3085로 다른 상태임)
+            }).then((data) => {
+            commit('setMe', payload);
+        }).catch((err) => {
+            console.error(err);
+        });
     },
     logOut({commit}, payload) {
         commit('setMe', null);
