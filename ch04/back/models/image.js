@@ -8,4 +8,9 @@ module.exports = (sequelize, DataTypes) => {
         charset: 'utf8', // 이모티콘은 필요없어서 mb4 빼버림
         collate: 'utf8_general_ci'
     });
+    Image.associate = (db) => {
+        db.Image.belongsTo(db.Post);
+    };
+
+    return Image;
 };

@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const passportConfig = require('./passport');
 const db = require('./models');
 const userRouter = require('./routes/user');
+const postRouter = require('./routes/post');
 const app = express();
 
 db.sequelize.sync({ force: true }); // 실무에선 쓰지말고 migration 권장
@@ -37,13 +38,13 @@ app.get('/', (req, res) => {
 });
 
 app.use('/user', userRouter);
-
-app.post('/post', (req, res) => {
-    if (req.isAuthenticated()) {
-
-    }
-});
+app.use('/post', postRouter);
 
 app.listen(3085, () => {
     console.log(`백엔드 서버 ${3085}번 포트에서 작동중.`);
 });
+
+
+// require과 module.exports, exports.XXX 
+// 대표적인 것 = module.exports로 선언하고, 사소한 것은 exports.XXX로 선언하는 것이 좋음(각 함수별로 분해하기 쉽게)
+// 우선권은 module.exports가 더 높음

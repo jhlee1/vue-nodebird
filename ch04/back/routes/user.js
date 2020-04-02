@@ -2,10 +2,11 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const router = express.Router();
+const { isLoggedIn, isNotLoggedIn} = require('./middlewares');
 
 const db = require('../models');
 
-app.post('/', async (req, res) => {
+router.post('/', isNotLoggedIn, async (req, res) => {
     try {
         const hash = await bcrypt.hash(req.body.password, 12); //salt 값이 높을수록 좋긴한데 컴퓨팅 파워를 많이 사용
         const exUser = await db.User.findOne({
@@ -44,7 +45,7 @@ app.post('/', async (req, res) => {
 // 로그인 구현을 위해 passport, session, cookie dependency 추가해주기 - npm i passport passport-local express-session cookie-parser
 // 요청에 대한 로깅을 위해서 npm i morgan
 
-app.post('/login', (req, res) => {
+router.post('/login', isNotLoggedIn, (req, res) => {
     passport.authenticate('local', (err, user, info) => {
         if (err) { // 에러 발생
             console.error(err);
@@ -65,7 +66,7 @@ app.post('/login', (req, res) => {
     })(req, res, next);
 });
 
-app.post('/logout', (req, res) => {
+router.post('/logout', isLoggedIn, (req, res) => {
     if (req.isAuthenticated()) {
         req.logout(); // 필수
         req.session.destroy(); // 선택 (로그인 정보 외에 다른 정보가 session에 들어있을 수 있으므로)
