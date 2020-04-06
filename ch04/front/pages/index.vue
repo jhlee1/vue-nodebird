@@ -1,7 +1,6 @@
 <template>
     <v-container>
         <post-form v-if="me" />
-        <v-btn @click="testAxios">Test</v-btn>
             <div>
                 <post-card v-for="p in mainPosts" :key="p.id" :post="p" />
             </div>
