@@ -18,6 +18,7 @@ app.use(morgan('dev'));
 app.use(cors({
     origin: 'http://localhost:3000', credentials: true
 }));
+app.use('/', express.static('uploads')); // uploads 폴더와 같이 정적 파일들을 제공하기 위해서 추가해줘야함 app.use('프론트 주소', express.static('백앤드 주소'));
 app.use(express.json()); // 이게 있어야만 request body를 json으로 받을 수 있음
 app.use(express.urlencoded({extended: false})); // Form에서 Action을 통해서 전송할 때 그 데이터를 해석해서 req.body에 넣어줌
 app.use(cookie('cookiesecret'));
