@@ -10,6 +10,7 @@ const limit = 10;
 export const mutations = {
     addMainPost(state, payload) {
         state.mainPosts.unshift(payload);
+        state.imagePaths = [];
     },
     removeMainPost(state, payload) {
         const index = state.mainPosts.findIndex(v => v.id === payload.id);
