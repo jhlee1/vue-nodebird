@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f99ebb7e-9370-4f35-866a-75275f1ee3df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch02/front/components/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/components/CommentForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch02/front/components/PostCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/components/PostCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch02/front/pages/profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/pages/profile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch02/front/store/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/store/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch02/front/store/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/front/store/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/back/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/back/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/back/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/back/routes/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/back/routes/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/front/components/PostForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/front/components/PostForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch04/front/store/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/front/store/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1YexD33cud9NlTU1Eo4IIoang4B" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -79,6 +81,11 @@
       <workItem from="1583840726804" duration="7839000" />
       <workItem from="1583996898537" duration="6940000" />
       <workItem from="1584065501635" duration="101000" />
+      <workItem from="1585616309206" duration="3068000" />
+      <workItem from="1585640694127" duration="137000" />
+      <workItem from="1585735246204" duration="1007000" />
+      <workItem from="1585876732139" duration="4622000" />
+      <workItem from="1585898647634" duration="3125000" />
     </task>
     <servers />
   </component>
@@ -106,6 +113,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583780845464" />
+    <state x="-1377" y="154" key="CommitChangelistDialog2" timestamp="1586132883393">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1377" y="154" key="CommitChangelistDialog2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1586132883393" />
     <state x="-1103" y="440" key="Github.ShareDialog" timestamp="1583892645119">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -135,23 +146,29 @@
     </state>
     <state x="-1530" y="169" key="SettingsEditor/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584065555937" />
     <state x="341" y="164" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583338211259" />
-    <state x="-1351" y="290" width="781" height="500" key="find.popup" timestamp="1584064034968">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="-1177" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586132796539">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1177" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1586132796539" />
+    <state x="-1351" y="307" width="781" height="490" key="find.popup" timestamp="1586132853193">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="498" y="282" width="683" height="486" key="find.popup/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583856565797" />
     <state x="-1351" y="290" width="781" height="500" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584064034968" />
     <state x="-1351" y="290" width="781" height="500" key="find.popup/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1584001539935" />
+    <state x="-1351" y="307" width="781" height="490" key="find.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1586132853193" />
     <state x="498" y="282" width="683" height="486" key="find.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583334537955" />
     <state x="440" y="190" key="scopes" timestamp="1583319077595">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="scopes/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583319077595" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1584065559230">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="-1343" y="258" width="766" height="682" key="search.everywhere.popup" timestamp="1586135240040">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/-109.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583781013763" />
     <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584065559230" />
     <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1584001543408" />
+    <state x="-1343" y="258" width="766" height="682" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1586135240040" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1583851325482" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583338085838" />
   </component>

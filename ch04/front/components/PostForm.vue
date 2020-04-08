@@ -15,8 +15,16 @@
                         @input="onChangeTextarea"
                 />
                 <v-btn type="submit" color="green" absolute right>짹짹</v-btn>
-                <input type="file" multiple hidden @change = "onChangeImages"> 
-                <v-btn type="buttn" @click="onClickImageUpload">이미지 업로드</v-btn> <!-- form 안에 button들은 type안에 button이라고 입력해줘야 눌렀을 때 해당 form이 submit되는 것을 막아줌 -->
+                <input ref="imageInput" type="file" multiple hidden @change="onChangeImages">
+                <v-btn type="button" @click="onClickImageUpload">이미지 업로드</v-btn> <!-- form 안에 버튼에는 타입 꼭 써주기. 안쓰면 버튼 눌렀을 때 submit될 수 있음. type안에 button이라고 입력해줘야 눌렀을 때 해당 form이 submit되는 것을 막아줌 -->
+                <div>
+                     <div v-for="(p, i) in imagePaths" :key="p" style="display: inline-block">
+                         <img :src="`http://localhost:3085/${p}`" alt="p" style="width: 200px">
+                         <div>
+                             <v-btn @click="onRemoveImage(i)" type="button">제거</v-btn>
+                         </div>
+                     </div>
+                </div>
             </v-form>
         </v-container>
     </v-card>
@@ -38,6 +46,7 @@
         computed: {
             // ...mapState(['users/me']),  이렇게 처리하기도 함
             ...mapState('users', ['me']),
+            ...mapState('posts', ['imagePaths'])
         },
         methods: {
             onChangeTextarea(value) {
@@ -61,7 +70,7 @@
                     })
                     .catch(() => {
 
-                    });
+                    })
                 }
             },
             onClickImageUpload() {
@@ -69,6 +78,17 @@
             },
             onChangeImages(e) {
                 console.log(e.target.files);
+<<<<<<< HEAD
+=======
+                const imageFormData =  new FormData();
+                [].forEach.call(e.target.files, (f) => {
+                    imageFormData.append('image', f); // { image: [ file1, file2 ... ] }
+                });
+                this.$store.dispatch('posts/uploadImages', imageFormData);
+            },
+            onRemoveImage(index) {
+                this.$store.commit('posts/removeImagePath', index);
+>>>>>>> master
             }
         }
     }
