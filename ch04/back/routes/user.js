@@ -6,7 +6,7 @@ const { isLoggedIn, isNotLoggedIn} = require('./middlewares');
 
 const db = require('../models');
 
-router.post('/', isNotLoggedIn, async (req, res) => {
+router.post('/', isNotLoggedIn, async (req, res, next) => {
     try {
         const hash = await bcrypt.hash(req.body.password, 12); //salt 값이 높을수록 좋긴한데 컴퓨팅 파워를 많이 사용
         const exUser = await db.User.findOne({
@@ -45,7 +45,7 @@ router.post('/', isNotLoggedIn, async (req, res) => {
 // 로그인 구현을 위해 passport, session, cookie dependency 추가해주기 - npm i passport passport-local express-session cookie-parser
 // 요청에 대한 로깅을 위해서 npm i morgan
 
-router.post('/login', isNotLoggedIn, (req, res) => {
+router.post('/login', isNotLoggedIn, (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {
         if (err) { // 에러 발생
             console.error(err);
@@ -56,7 +56,7 @@ router.post('/login', isNotLoggedIn, (req, res) => {
         }
         // cookie는 이 밑 라인에서 알아서 header에 넣어줌
         return req.login(user, async(err) => {  // session에 user를 저장 ... 어떻게? passport/index.js 안에 serialize 설정을 통해
-        
+
             if (err) {
                 console.err(err);
                 return next(err);

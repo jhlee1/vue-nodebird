@@ -85,7 +85,8 @@
                     this.$store.dispatch('users/signUp',
                         {
                             nickname: this.nickname,
-                            email: this.email
+                            email: this.email,
+                            password: this.password
 
                         }
                     ).then(() => { // 각 문장이 비동기적으로 실행되기 때문에 dispatch가 return하는 premise에 then을 붙여서 실행되도록한
