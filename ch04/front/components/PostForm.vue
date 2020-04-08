@@ -51,16 +51,10 @@
                 if (this.$refs.form.validate()) {
                     console.log("Submitted by " + this.me)
                     this.$store.dispatch('posts/add', {
-                        content: this.content,
-                        User: {
-                            nickname:  this.me.nickname
-                        },
-                        Comments: [],
-                        Images: [],
-                        id: Date.now(),
-                        crearedAt: Date.now()
+                        content: this.content
                     })
                     .then(() => {
+                        this.content = '';
                         this.hideDetails = false;
                         this.success = true;
                         this.successMessages = '게시글 등록 성공';
