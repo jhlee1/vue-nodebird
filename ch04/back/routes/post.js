@@ -3,6 +3,7 @@ const multer = require('multer'); // form data로 업로드한 image를 읽기 �
 const path = require('multer');
 
 const { isLoggedIn } = require('./middlewares');
+const db = require('../models');
 
 const router = express.Router();
 
@@ -29,9 +30,44 @@ router.post('/images', isLoggedIn, upload.array(req), (req, res) => { // single 
 
 
 
-router.post('/', isLoggedIn, (req, res) => {
+router.post('/', isLoggedIn, (req, res, next) => {
     // if (req.isAuthenticated()) {} // 앞에 미들웨어에서 처리하므로 필요 없음
+    try {
+        // 정규 표현식으로 # 태그 추출하기 
+        // EX) req.body.content === '안녕하세요 여러분~! #NodeJS #Vue
+        // req.body.imagePaths,
+        const hashtags = req.body.match(/#[^\s#]+/g);
+        const newPost = await db.Post.create({
+            content: req.body.content,
+            UserId: req.user.id
+        });
+        if (hashtags) {
+            const result = await Promise.all(
+                hashtags.map(tag => db.Hashtag.findOrCreate({
+                where: { name: tag.slice(1).toLowerCase()},
+            })));
+        }
+        await newPost.addHashtags(result.map(r => r[0])); // models에서 Post.belongsToMany로 연관 관계를 설정해놔서 addHashtags라는 method가 sequelize에서 자동으로 생성됨
+        
+        // db.sequelize.query('SQL); 쿼리가 복잡한 경우 이런식으로 직접 쿼리를 보내서 처리 가능
+    
+        const fullPost = await db.Post.findOne({
+            where: { id: newPost.id},
+            include: [{
+                model: db.User,
+                attributes: [
+                    'id',
+                    'nickname'
+                ]
+            }]
+        });
 
+        return res.json(fullPost);
+
+    } catch(err) {
+        console.error(err);
+        next(err);
+    }
 
 
 });
