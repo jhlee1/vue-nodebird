@@ -41,3 +41,13 @@ router.post('/images', isLoggedIn, (req, res) => {
 });
 
 module.exports = router;
+
+// exports의 역할 - 외부에서 사용할 수 있도록 만들어줌
+// exports된 module은 require를 이용해서 사용할 수 있음
+// 위의 exports.XXXX는 아래와 같이 표현할 수 있음
+// module.exports가 exports.XXX보다 우선권이 있음
+
+// module.exports = {
+//  isLoggedIn: (req, res, next) =>  {},
+//  isNotLoggedIn: (req, res, next) => {} 
+// }

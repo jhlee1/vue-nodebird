@@ -14,3 +14,6 @@ exports.isNotLoggedIn = (req, res, next) => {
     return res.status(401).send('로그인한 사용자는 할 수 없습니다.');
 };
 
+
+module.exports = router;
+
